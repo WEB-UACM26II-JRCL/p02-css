@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen Practico de CSS</title>
+    <!-- AQUI DEBEN COLOCAR LA ETIQUETA STYLE Y EL CSS -->
+    <style> 
+
+    .titulo {
+            text-align: center;       /* centra el texto */
+            color: darkblue;             /* color del texto */
+            font-size: 32px;
+            }
+      #tabla-precios {
+  width: 80%;                   /* Ancho de la tabla */
+  border: 1px solid black #ccc;       /* Borde exterior de la tabla */
+  border-collapse: collapse;    /* Une los bordes de las celdas para que no se vean dobles */
+}
+
+#tabla-precios th {
+  background-color: darkblue;
+  color: #white;
+  padding: 10px;
+}
+              
+#tabla-precios td {
+  border-bottom: 1px solid gray; /* Grosor | Estilo | Color */
+  padding: 8px;               /* Recomendado para dar espacio al texto */
+}
+
+#tabla-precios tbody tr:nth-child(even) {
+  background-color: lightgray;
+  }
+  
+  #tabla-precios tbody tr:hover {
+  background-color: lightblue; /* Color que se activa al pasar el mouse */
+}
+
+.contenedor-alertas {
+  margin: 20px 0;           /* Margen (separación exterior) */
+  padding: 15px;       /* Padding (espaciado interior) */
+  background-color: #f5f5f5;/* Color de fondo (puedes usar el que prefieras) */
+}
+
+.contenedor-alertas > p {
+  border: 2px solid red; /* Ancho | Estilo | Color */
+}
+
+/* Selecciona solo el <a> que está justo después de otro <a> */
+a + a {
+  color: green; /* Cambia el color del texto */
+}
+
+a:hover {
+  color: red;        /* Cambia el color del texto */
+  font-weight: bold;     /* Aplica texto en negrita */
+}
+
+a[href*="servicios" i] {
+  background-color: yellow;
+  color: black;
+}
+    </style>
+</head>
+
+
+<body>
+    <nav>
+        <a href="#inicio">Inicio</a> |
+        <a href="#servicios">Servicios</a> |
+        <a href="#contacto">Contacto</a>
+    </nav>
+ 
+    <h1 class="titulo"> Panel de Control de Usuario</h1>
+
+    <table id="tabla-precios">
+        <tr>
+            <th>Plan</th>
+            <th>Precio</th>
+            <th>Soporte</th>
+        </tr>
+
+        <tr>
+            <td>Basico</td>
+            <td>$9.99/mes</td>
+            <td>Por correo</td>
+        </tr>
+
+        <tr>
+            <td>Profesional</td>
+            <td>$29.99/mes</td>
+            <td>24/7 Telefonico</td>
+        </tr>
+
+        <tr>
+            <td>Corporativo</td>
+            <td>$99.99/mes</td>
+            <td>Gerente Dedicado</td>
+        </tr>
+    </table>
+
+    <br>
+
+    <div class="contenedor-alertas">
+
+        <p>
+            ALERTA IMPORTANTE:
+            Tu suscripcion vencera pronto.
+        </p>
+
+        <section>
+            <p>
+                Nota interna: Este mensaje de soporte
+                no deberia llevar borde rojo.
+            </p>
+        </section>
+
+        <p>
+            ALERTA SECUNDARIA:
+            Recuerda verificar tu correo electronico.
+        </p>
+
+    </div>
+</body>
+</html>
